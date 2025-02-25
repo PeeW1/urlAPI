@@ -1,5 +1,6 @@
 
 let bntEncurtar = document.getElementById('btn-encurtar');
+let btnCopiar = document.getElementById('btn-copiar');
 
 bntEncurtar.addEventListener('click', (e) => {
     let url = document.getElementById("url-input").value.trim();
@@ -38,5 +39,14 @@ bntEncurtar.addEventListener('click', (e) => {
             console.log(json);
             let inputUrl = document.getElementById("url-input");
             inputUrl.value = json.shortUrl;
+            console.log(inputUrl.value)
         });
+})
+
+btnCopiar.addEventListener('click', (e) => {
+    let url = document.getElementById("url-input");
+    url.select();
+    url.setSelectionRange(0, 99999);
+
+    document.execCommand("copy");
 })
