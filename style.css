@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #1E272E;
+    --yellow-bg-color: #FFD32A;
+    --main-font: 'Open Sans', sans-serif;
+    --yellow-hover-bg-color: #f3e3a1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E272E;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--main-font);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100vw;
+    margin: 10px;
+}
+
+.div-title h1{
+    font-size: 32px;
+    color: white;
+    font-family: var(--main-font);
+}
+
+.div-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.div-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.url-input {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--main-bg-color);
+    text-align: center;
+}
+
+.url-input::placeholder {
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+.btn-input {
+    border-radius: 20px;
+    background-color: var(--yellow-bg-color);
+    border: 1px solid var(--main-bg-color);
+    padding: 10px;
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+.btn-input-secundario {
+    padding: 10px 15px;
+}
+
+.btn-input:hover {
+    background-color: var(--yellow-hover-bg-color);
+    transition: 0.5s;
+}
+
+@media (min-width: 1024px) {
+    .div-inputs {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
